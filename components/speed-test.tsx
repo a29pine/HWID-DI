@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -27,7 +26,7 @@ const CustomGauge = ({
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="relative w-32 h-32">
+      <div className="relative w-40 h-40">
         <svg className="w-full h-full" viewBox="0 0 100 100">
           {/* Background circle */}
           <circle
@@ -132,7 +131,7 @@ export default function SpeedTest() {
     const pingTimes: number[] = []
 
     // Do multiple ping tests to calculate average and jitter
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 10; i++) {
       const pingStart = Date.now()
 
       // Simulate a network request
@@ -159,7 +158,7 @@ export default function SpeedTest() {
 
   const testDownloadSpeed = async () => {
     // Simulate download speed test
-    const fileSize = 5 * 1024 * 1024 // 5MB
+    const fileSize = 50 * 1024 * 1024 // 50MB
     const startTime = Date.now()
 
     // Download a file and measure the time it takes
@@ -191,7 +190,7 @@ export default function SpeedTest() {
 
   const testUploadSpeed = async () => {
     // Simulate upload speed test
-    const fileSize = 2 * 1024 * 1024 // 2MB
+    const fileSize = 20 * 1024 * 1024 // 20MB
     const startTime = Date.now()
 
     try {
